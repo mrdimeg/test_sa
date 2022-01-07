@@ -1,7 +1,6 @@
-#GIT
+# Git
 
-
-##Git actions
+## Git actions
 
 ```yaml
 name: CI
