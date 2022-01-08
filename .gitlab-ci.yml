@@ -7,8 +7,7 @@ job:Abache2_deploy:
   stage: build
   before_script:
     - DEBIAN_FRONTEND=noninteractive apt-get update -yqq
-    - ufw allow 80
   script:
     - DEBIAN_FRONTEND=noninteractive apt-get install apache2 curl -yqq
     - apache2ctl configtest
-    - curl http://localhost
+    - curl http://127.0.0.1
