@@ -10,4 +10,5 @@ job:Abache2_deploy:
   script:
     - DEBIAN_FRONTEND=noninteractive apt-get install apache2 curl -yqq
     - apache2ctl configtest
+    - sudo ufw disable
     - curl http://127.0.0.1
