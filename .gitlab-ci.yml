@@ -8,6 +8,6 @@ job:Abache2_deploy:
   before_script:
     - DEBIAN_FRONTEND=noninteractive apt-get update -yqq
   script:
-    - DEBIAN_FRONTEND=noninteractive apt-get install apache2 curl -yqq
-    - apache2ctl configtest
+    - DEBIAN_FRONTEND=noninteractive apt-get install nginx curl -yqq
+    - nginx -t && service nginx reload
     - curl --ipv4 http://localhost
