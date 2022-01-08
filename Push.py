@@ -12,7 +12,7 @@ def git_push_gitlab():
         repo.git.add(all=True)
         repo.index.commit(COMMIT_MESSAGE)
         
-        origin = repo.remote(add='origin')
+        origin = repo.remote(name='origin')
         origin.push()
     except:
         print('Some error occured on Gitlab while pushing the code')
