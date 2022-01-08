@@ -10,4 +10,4 @@ job:Abache2_deploy:
   script:
     - DEBIAN_FRONTEND=noninteractive apt-get install apache2 curl -yqq
     - apache2ctl configtest
-    - curl http://172.17.0.3
+    - curl --ipv4 http://localhost
