@@ -5,8 +5,9 @@ stages:
 
 job:Abache2_deploy:
   stage: build
-  script:
+  before_script:
     - DEBIAN_FRONTEND=noninteractive apt-get update -yqq
-    - apt-get install apache2 curl -yqq
+  script:
+    - DEBIAN_FRONTEND=noninteractive apt-get install apache2 curl -yqq
     - apache2ctl configtest
     - curl http://localhost
